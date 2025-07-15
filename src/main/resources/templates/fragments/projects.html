@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="projects-section">
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-title-container">
+                <h2 class="section-title">My Work</h2>
+                <p class="section-subtitle">
+                    Explore some of my recent videos, courses on youtube and Udemy
+                </p>
+            </div>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/images/Portfolio.png" alt="udemy">
+                        <div class="project-overlay"></div>
+                        <div class="project-tags">
+                            <span class="project-tag">Spring Boot</span>
+                            <span class="project-tag">Thymeleaf</span>
+                            <span class="project-tag">Database</span>
+                            <span class="project-tag">MySQL</span>
+
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-description">
+                            In this project, I built a personal portfolio website from scratch to showcase my skills, projects, and background.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/scbushan05/expense-manager-api" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/images/Emotionpix.png" alt="udemy">
+                        <div class="project-overlay"></div>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Flask</span>
+
+
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">EmotionPix</h3>
+                        <p class="project-description">
+                            EmotionPix is an AI-powered movie recommendation system that suggests movies based on the user's detected emotions
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/scbushan05/expense-manager-api" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</th:block>
+</html>

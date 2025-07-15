@@ -1,8 +1,11 @@
-# Use official Java 17 image
-FROM eclipse-temurin:17-jdk
+# ---------- Stage 1: Build the JAR ----------
+FROM maven:3.8.6-amazoncorretto-17 AS build
+WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
 
-# Copy the JAR file built by Maven
-COPY target/*.jar app.jar
-
-# Run the Spring Boot JAR
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+# ---------- Stage 2: Run the JAR ----------
+FROM amazoncorretto:17
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]
